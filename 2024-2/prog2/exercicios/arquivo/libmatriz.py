@@ -18,18 +18,84 @@ cada uma das funções criando uma aplicação de testes.
 import random
 
 def loadMatriz(nome_arquivo):
-    for i in nome_arquivo:
-        mat = i + "\n"
-    pass
+    arquivo = open(nome_arquivo, "rt")
+    lista = arquivo.readline()
+    matriz = []
+    matrizInt = []
+    while lista != "\n":
+        l1 = lista.split()
+        matriz.append(l1)
+        lista = arquivo.readline()
+
+    linha = []
+    for itens in matriz:
+        for j in itens:
+            linha.append(int(j))
+        matrizInt.append(linha)
+        linha = []
+    arquivo.close()
+
+    return matrizInt
+
 
 def salvaMatriz(m, nome_arquivo):
     if m != None:
         linhas = len(m)
         colunas = len(m[0])
-    arquivo = open(nome_arquivo)
+        matriz = ""
+        matrizFinal = ""
+        for l in range(linhas):
+            for c in range(colunas):
+                matriz = matriz + str(m[l][c]) + " "
+            matrizFinal = matrizFinal + matriz + "\n"
+            matriz = ""
+    
+    arquivo = open(nome_arquivo, "wt")
+    arquivo.write(matrizFinal)
 
-def insere(m, l, c, Inserida):
-    pass
+    arquivo.close()
+
+def insere(m, l, c, inserida):
+    # definindo a matriz menor a ser inserida
+    qtdL = int(input("qtd de linhas a inserir: "))
+    qtdC = int(input("qtd de colunas a inserir: "))
+    matInserida = []
+    linhaMat = []
+    for linhas in range(qtdL):
+        for colunas in range(qtdC):
+            linhaMat.append(inserida)
+        matInserida.append(linhaMat)
+        linhaMat = []
+
+    # recriando a matriz com a matriz menor inserida
+    novaMatriz = []
+    for i in range(len(m)):
+        # condição onde a linha matriz princip é igual a linha de inserir matriz
+        if i >= l and i <= qtdL:
+            # início da matriz principal
+            for j in range(0, c):
+                linhaMat.append(m[i][j])
+            
+            # ponto inicial (coluna) onde insere matriz menor
+            pos = 0 # posição da linha da matriz menor
+            for k in range(qtdC):
+                linhaMat.append(matInserida[pos][k])
+                pos += 1
+
+            # fim da matriz principal
+            for z in range(c + qtdC, len(m)):
+                linhaMat.append(m[i][z])
+            novaMatriz.append(linhaMat)
+        else:
+            novaMatriz.append(m[i])
+        linhaMat = []
+
+    return novaMatriz
+
+#        for linhaInsere in range(l, l + qtdL):
+#            linha.append(matInserida[linhaInsere])
+#            print(linha)
+#    return matInserida
 
 def testeLogico(m, x, y, qtdC, qtdL): # sugestao do Ernani
     qL = len(m)
@@ -49,15 +115,14 @@ def extraiMat(m, l, c, qtdL, qtdC):
     tt = testeLogico(m, l, c, qtdL, qtdC)
     if tt == True:
         novaMatriz = []
-        for i in range((l-1), (l-1) + qtdL):
+        novaLinha = []
+        for i in range(l, l + qtdL):
             lista1 = m[i]
-            for j in range(c - 1, (c - 1) + qtdC):
-                lista2 = lista1[j]
-                novaMatriz.append(lista2)
+            for j in range(c, c + qtdC):
+                novaLinha.append(lista1[j])
+            novaMatriz.append(novaLinha)
+            novaLinha = []
         return novaMatriz
-#                print("%5d" % lista2, " ", end="")
-#            print()
-
 
 def geraMat(lin, col, minimo, maximo):
     matriz = []
@@ -76,22 +141,23 @@ def geraMat(lin, col, minimo, maximo):
         matriz.append(matrizLinhas)
     return matriz
 
-def formatImpressao2(matriz, l):                    # l = numero de linhas da matriz
-    mat = ""
-    for numeros in matriz:
-        linhas = 1
-        while linhas <= l:
-            #mat1 = matriz[i]
-            mat = mat + " " + str(numeros)
-            linhas += 1
-        mat = mat + "\n"
-    return mat
-
-def formatImpressao(x):
-    for z in x:
-        for w in z:
-            print("%5d" % w, " ", end="")
+def formatImpressao(matriz):
+    for linhas in matriz:
+        for colunas in linhas:
+            print("%1d" % colunas, " ", end="")
         print()
 
+#def formatImpressao2(matriz, lin, col):                    # l = numero de linhas da matriz
+#    mat = ""
+#    #linhas = int(len(matriz)/col)
+#    novaLinha = 0
+#    for i in range(0, lin - 1):
+#        #mat1 = matriz[i]
+#        mat = mat + " " + str(matriz[i])
+#        if novaLinha == col:
+#            mat = mat + "\n"
+#            novaLinha = 0
+#        novaLinha += 1
+#    return mat
 
 # fim das funções
