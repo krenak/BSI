@@ -6,9 +6,9 @@ Sobrenomes, possui uma lista dos 15 sobrenomes mais frequentes no Brasil.
 Construa uma função que recebe como parâmetros as duas listas e um número
 inteiro representando o tamanho do nome da pessoa em partes. Por exemplo, 4:
 1 nome + 3 sobrenomes. A função deve retornar um nome de pessoa contendo uma
-quantidade de partes definida pelo terceiro parâmetro.
+quantidade de partes definida pelo terceiro parâmetro
 
-Observação: sem sobrenomes repetidos.
+Observação: sem sobrenomes repetidos
 
 ref:
 https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
@@ -22,6 +22,7 @@ def combNomes(nomes, sobren, tam):
             print(novoNome)
             #nomeCompl.append(novoNome)
         print()
+
 '''
 def processoNomes(n, s, t):
     for i in range(len(t)):                             # iteração da quantidade de partes def pelo 3o parametro
@@ -41,15 +42,15 @@ def processoNomes(n, s, t):
 def limpEntrada(n, s, t):
 
     #sepN = separação da entrada nomes em uma lista de strings
-    sepN = str(n.read()) 
+    sepN = str(n.read())
     sepN2 = sepN.split(",")
 
     #sepS = separação da entrada sobrenomes em uma lista de strings
-    sepS = str(s.read()) 
+    sepS = str(s.read())
     sepS2 = sepS.split("\n")
     
     #sepT = separação da entrada tamanho em uma lista de strings
-    sepT = str(t.read()) 
+    sepT = str(t.read())
     sepT2 = int(sepT.split("\n"))
 
     return sepN2, sepS2, sepT2
@@ -64,13 +65,12 @@ def main():
     saida = combNomes(dados[0], dados[1], dados[2])
     print (saida)
     #for i in sepT2:
-    #    if 
+    #    if
     #    while i != 0:
-            
 
     ''' If you’re not using the with keyword, then you should call f.close()
-        to close the file and immediately free up any system resources used 
-        by it.
+        to close the file and immediately free up any system resources used
+        by it
     '''
     nomes.close()
     tamanho.close()
