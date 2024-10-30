@@ -49,7 +49,7 @@ def salvaMatriz(m, nome_arquivo):
                 matriz = matriz + str(m[l][c]) + " "
             matrizFinal = matrizFinal + matriz + "\n"
             matriz = ""
-    
+
     arquivo = open(nome_arquivo, "wt")
     arquivo.write(matrizFinal)
 
@@ -67,6 +67,12 @@ def insere(m, l, c, inserida):
         matInserida.append(linhaMat)
         linhaMat = []
 
+    # teste de dimensão da matriz a ser inserida
+    if (l + qtdL) > (l + len(m)):
+        qtdL = len(m) - l
+    if (c + qtdC) > (len(m[0]) - c):
+        qtdC = len(m[0]) - c
+
     # recriando a matriz com a matriz menor inserida
     novaMatriz = []
     for i in range(len(m)):
@@ -75,7 +81,7 @@ def insere(m, l, c, inserida):
             # início da matriz principal
             for j in range(0, c):
                 linhaMat.append(m[i][j])
-            
+
             # ponto inicial (coluna) onde insere matriz menor
             pos = 0 # posição da linha da matriz menor
             for k in range(qtdC):
@@ -91,6 +97,21 @@ def insere(m, l, c, inserida):
         linhaMat = []
 
     return novaMatriz
+
+def deslocaEsq(matriz):
+    novaCol = []
+    novaMatriz = []
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            # print(matriz[j][i])
+            novaCol.append(matriz[j][i])
+            if j == 0:
+                del matriz[j]
+            novaMatriz.append(novaCol)
+            novaCol = []
+
+    print(novaMatriz)
+
 
 def testeLogico(m, x, y, qtdC, qtdL): # sugestao do Ernani
     qL = len(m)
@@ -137,8 +158,8 @@ def geraMat(lin, col, minimo, maximo):
     return matriz
 
 def formatImpressao(matriz):
-    for linhas in matriz:
-        for colunas in linhas:
+    for linhas in range(len(matriz)):
+        for colunas in matriz[linhas]:
             print("%1d" % colunas, " ", end="")
         print()
 
