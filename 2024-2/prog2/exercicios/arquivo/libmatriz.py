@@ -92,11 +92,6 @@ def insere(m, l, c, inserida):
 
     return novaMatriz
 
-#        for linhaInsere in range(l, l + qtdL):
-#            linha.append(matInserida[linhaInsere])
-#            print(linha)
-#    return matInserida
-
 def testeLogico(m, x, y, qtdC, qtdL): # sugestao do Ernani
     qL = len(m)
     qC = len(m[0])
