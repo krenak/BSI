@@ -1,5 +1,3 @@
-import random
-
 def loadMat(arquivo):
     matrizArquivo = open(arquivo, "rt")
     entrada = matrizArquivo.readline()
