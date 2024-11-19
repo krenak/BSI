@@ -13,14 +13,22 @@ Exemplo:
 {24567890 : [12,34,56,78], 29070600 : [34,56,57,78,89,23], etc..}
 
 '''
-import remove as rm
+import carteiro as ct
+
+def arquivoCEP(arquivo):
+    lista = open(arquivo, "rt")
+    linha = lista.readline().strip()
+    ceps = []
+    while linha != "":
+        ceps.append(linha)
+        linha = lista.readline().strip()
+    lista.close()
+    return ceps
 
 def main():
-    lista = [{'id': '#FF0000', 'cor': 'vermelho'}, {'id': '#800000', 'cor': 'marrom'}, {'id': '#FFFF00', 'cor':
-'amarelo'}, {'id': '#808000', 'cor': 'oliva'}]
-    cod = str(input("insira o cod: "))
-    print(lista)
-    saida = rm.remove(lista, cod)
+    ceps = arquivoCEP("ceps.txt")
+    print(ceps)
+    saida = ct.carteiro(ceps)
     print()
     print(saida)
 
