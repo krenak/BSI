@@ -16,14 +16,8 @@ Dicionário de entrada:
 '''
 import maioresValores as mv
 
-def imprime(d, v):
-    print(d)
-    s = mv.valores(d)
-    print("{} maiores valores extraídos: {}".format(v, s[v]))
-    print()
-
 def main():
     d = {'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100}
-    mv = int(input("quantidade de maiores valores: "))
-    imprime(d, mv)
+    quantidade = int(input("quantidade de maiores valores: "))
+    mv.imprime(d, quantidade)
 main()
