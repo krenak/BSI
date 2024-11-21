@@ -31,6 +31,6 @@ def main():
     linhasBiblia = arquivo("biblia-novo-test.txt")
     contaJesus = contagem(linhasBiblia)
     print("Foram {} vezes que Jesus foi citado.".format(contaJesus))
-
+    # ultimo resultado: 1147 vezes
 
 main()
