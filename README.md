@@ -26,10 +26,8 @@ glance about what the freshmen can expect about IS course. For now, courses are 
 4. [Discrete Math](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/md)
 5. [General Theory of Management](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/tga)
 
-[Third semester](https://gitlab.com/krenak/bsi/-/tree/main/2023-1)
+[Third semester](https://gitlab.com/krenak/bsi/-/tree/main/2024-2)
 
-1. [Single Variable Calculus](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/calc1)
-2. [Programming II](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/prog2)
-3. [Information System Lab](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/lsi)
-4. [Discrete Math](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/md)
-5. [General Theory of Management](https://gitlab.com/krenak/bsi/-/tree/main/2023-1/tga)
+2. [Programming II (again! :P)](https://github.com/krenak/BSI/tree/main/2024-2/prog2)
+3. [General System Theory](https://github.com/krenak/BSI/tree/main/2024-2/tgs)
+4. [Discrete Math (again! :P)](https://github.com/krenak/BSI/tree/main/2024-2/md)
