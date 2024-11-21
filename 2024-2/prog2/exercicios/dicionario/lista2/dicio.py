@@ -8,4 +8,4 @@ def englishDicio(s):
             if palavras == chaves[p]:
                 palavras = d[chaves[p]]
         novaFrase.append(palavras)
-    print(novaFrase)
+    return novaFrase

@@ -11,10 +11,14 @@ disponível.
 '''
 import dicio as dc
 
-def main():
-    f = str(input("frase a ser convertida: "))
-    fraseConvertida = dc.englishDicio(f)
+def imprime(l):
+    for palavra in l:
+        print(palavra, "", end="")
 
+def main():
+    f = str(input("frase a ser convertida: ")) # frase teste: the book is on the table
+    fraseConvertida = dc.englishDicio(f)
+    imprime(fraseConvertida)
     #print(fraseConvertida)
 
 main()
