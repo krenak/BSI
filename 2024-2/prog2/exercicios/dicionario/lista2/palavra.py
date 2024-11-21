@@ -3,7 +3,7 @@ def palavra(p):
     novaPalavra = ""
     for caracteres in p:
         for letra in d.keys():
-            if caracteres == d[letra]:
-                caracteres = d.values()
+            if caracteres == letra:
+                caracteres = d[letra]
         novaPalavra = novaPalavra + caracteres
     return novaPalavra
