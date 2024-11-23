@@ -12,3 +12,31 @@ def combinacoes(d):
             dicioPares = {}                             # exclusão dos pares para receber novos itens
             j += 1                                      # flag do while
     return listaComb
+
+def combinaListas(l):
+    turma = []
+    chamada = []
+    aluno = []
+    alunos = []
+    for dicionarios in l:
+        for chaves in dicionarios:
+            aluno.append(dicionarios[chaves])
+        alunos.append(aluno)
+        aluno = []
+
+        c = list(dicionarios.keys())
+        for pos in range(0, len(c) - 1):
+            aluno.append(dicionarios[c[pos]])
+        chamada.append(aluno)
+        aluno = []
+
+        for pos in range(1, len(c)):
+            aluno.append(dicionarios[c[pos]])
+        turma.append(aluno)
+        aluno = []
+
+    return alunos, chamada, turma
+
+def imprime(l):
+    for listas in l:
+        print(listas)

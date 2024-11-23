@@ -19,5 +19,6 @@ import maioresValores as mv
 def main():
     d = {'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100}
     quantidade = int(input("quantidade de maiores valores: "))
+    print()
     mv.imprime(d, quantidade)
 main()

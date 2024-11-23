@@ -2,7 +2,6 @@ def imprime(d, v):
     print(d)
     s = valores(d, v)
     print("{} maiores valores extraídos: {}".format(v, s))
-    print()
 
 def valores(d, pos):
     maiores = []                                                # lista vazia para sequenciamento de valores

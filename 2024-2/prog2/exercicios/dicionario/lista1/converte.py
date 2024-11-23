@@ -8,3 +8,13 @@ def converte(d):
             novoDicio = {chaves[0]: valores[0][j], chaves[1]: valores[1][j]}
             listaDicio.append(novoDicio)
     return listaDicio
+
+def converteListaDicio(l):
+    d = {}
+    alunos = []
+    for i in l:
+        for j in range(1, len(i)):
+            alunos.append(i[j])
+        d[i[0]] = alunos
+        alunos = []
+    return d
