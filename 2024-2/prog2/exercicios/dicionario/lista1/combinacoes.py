@@ -37,6 +37,21 @@ def combinaListas(l):
 
     return alunos, chamada, turma
 
+def combinaDicio(d1, d2):
+    novoDicio = {}
+    chaveD1 = list(d1.keys())
+    chaveD2 = list(d2.keys())
+    for i in range(len(d1)):
+        novoDicio[chaveD1[i]] = [d1[chaveD1[i]]]
+    for j in range(len(d2)):
+        if chaveD2[j] not in novoDicio:
+            novoDicio[chaveD2[j]] = [d2[chaveD2[j]]]
+        else:
+            valor = d1[chaveD2[j]]
+            novoDicio[chaveD2[j]] = [valor, d2[chaveD2[j]]]
+
+    return novoDicio
+
 def imprime(l):
     for listas in l:
         print(listas)
