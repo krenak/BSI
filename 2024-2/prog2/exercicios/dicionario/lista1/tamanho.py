@@ -1,3 +1,15 @@
+def abrirArquivo(arquivo):
+    paragrafos = []
+    arq = open(arquivo, "rt")
+    linha = arq.readline()
+    while linha != "":
+        listaPalavras = linha.split()
+        paragrafos.append(listaPalavras)
+        linha = arq.readline()
+
+    arq.close()
+    return paragrafos
+
 def tamanhoLista(d):
     listaTam = []
     saidaTam = []
@@ -18,3 +30,20 @@ def tamanhoLista(d):
         elif tamTupla == tam:
             saidaTam.append(listaTam[tuplas][0])
     return saidaTam
+
+def tamanhoPalavras(l):
+    listaPalavras = []
+    dicioPalavras = {}
+    for palavra in range(len(l[0])):
+        cont = 0
+        for letras in l[0][palavra]:
+            cont += 1
+        if cont not in dicioPalavras:
+            listaPalavras.append(l[0][palavra])
+            dicioPalavras[cont] = listaPalavras
+        else:
+            pAnterior = dicioPalavras[cont][0]
+            novaPalavra = l[0][palavra]
+            dicioPalavras[cont] = [pAnterior, novaPalavra]
+        listaPalavras = []
+    return dicioPalavras

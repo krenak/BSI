@@ -15,7 +15,7 @@ Dicionário de saída:
 import tamanho as tam
 
 def main():
-    entrada = tam.abrir("textoEntrada.txt")
+    entrada = tam.abrirArquivo("textoEntrada.txt")
     d = tam.tamanhoPalavras(entrada)
     print(d)
 

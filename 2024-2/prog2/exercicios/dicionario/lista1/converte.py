@@ -18,3 +18,14 @@ def converteListaDicio(l):
         d[i[0]] = alunos
         alunos = []
     return d
+
+def converteListas(d):
+    listaP = []
+    listaS = []
+    chaves = list(d.keys())
+    for i in chaves:
+        listaS.append(i)
+        listaS.append(d[i])
+        listaP.append(listaS)
+        listaS = []
+    return listaP
