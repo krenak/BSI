@@ -1,0 +1,10 @@
+123.456.789-00, João Silva, 34, São Paulo  
+987.654.321-99, Maria Oliveira, 28, Rio de Janeiro  
+456.789.123-45, Carlos Pereira, 41, Belo Horizonte  
+321.654.987-12, Ana Costa, 22, Recife  
+654.321.987-65, Bruno Souza, 37, Curitiba  
+789.123.456-78, Fernanda Santos, 30, Porto Alegre  
+159.753.486-20, Ricardo Lima, 46, Salvador  
+753.159.487-36, Larissa Martins, 25, Fortaleza  
+852.963.741-54, Eduardo Alves, 29, Florianópolis  
+963.852.741-32, Camila Rocha, 33, Campinas
