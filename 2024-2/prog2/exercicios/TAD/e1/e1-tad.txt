@@ -1,0 +1,21 @@
+-papel de desenvolvedor do tad
+
+CONSTRUA UM TAD CHAMADO TADPESSOA QUE É CAPZ DE ARMAZENAS OS 
+SEGUINTES ATRIBUOTS: NOME DA PESSOA, PESO E ALTURA, E IDADE.
+O TAD POSSUI A SEGUINTE INTERFACE:
+
+new_pessoa(nome, peso, altura, idade): retorna a estrutura de dados que vc escolheu para representar e armazenar os dados de uma pessoa
+
+maiorIdade(tadpessoa): retorna True se a pessoa for de maior, False caso contrário.
+
+imc(tadpessoa): retorna o IMC da pessoa pssada como argumento.
+getNome(tadpessoa): retorna o nome da pessoa passda como argumento.
+getPeso(tadpessoa): retorna o nome da pessoa passda como argumento.
+getAltura(tadpessoa): retorna o nome da pessoa passda como argumento.
+getIdade(tadpessoa): retorna o nome da pessoa passda como argumento.
+==================================================
+-Papel do usuário  do TAD
+CONSTRUA UMA APLICAÇÃO QUE LEIA UM ARQUIVO CONTENDO, EM CADA LINHA,
+O NOME, A IDADE, O PESO E A ALTURA DE PESSOAS. EM CADA LINHA, OS DADOS ESTÃO SEPARADOR POR VÍRGULA. PARA CADA PESSOA LIDA, CRIE UM DADO TIPO TADPESSOA E ARMAZENE-O EM UMA LISTA.
+
+POR ÚLTIMO, PASSEIE PELA LISTA INTERAGINDO COM OS TADPESSOA E CALCULE O IMC DE CADA PESSOA. PARA CADA PESSOA, EXIBA NA TELA O NOME, A IDADE, O PESO, A ALTURA E O VALOR DO IMC APENAS SE A PESSOA FOR DE MAIOR.

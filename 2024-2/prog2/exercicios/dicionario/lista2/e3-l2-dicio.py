@@ -1,7 +1,8 @@
 import produtos as pd
 
 def main():
-	p = pd.abreArquivo("produtos.txt")
-	listaMercado = pd.mercado(p)
+    arquivo = "produtos.txt"
+    p = pd.abreArquivo(arquivo)
+    listaMercado = pd.mercado(p, arquivo)
 
 main()
