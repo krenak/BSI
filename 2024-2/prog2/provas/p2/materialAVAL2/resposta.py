@@ -5,20 +5,20 @@ def fazNF(D, filename):
             #--------- cabecalho ---------#
             arq2 = open("NF"+nomes, "wt")
             arq2.write("{}{}".format("-"*80, "\n"))
-            arq2.write("{:30}{}{}".format("", "Supermercado Boa Compra", "\n"))
-            arq2.write("{:20}{}{}".format("", "Av. Central, 1234, - Centro, Cidade Exemplo", "\n"))
-            arq2.write("{:30}{}{}".format("", "CNPJ: 12.345.678/0001-99", "\n"))
-            arq2.write("{:30}{}{}".format("", "Telefone: (11) 1324-5678", "\n"))
+            arq2.write("{}{}{}".format(" "*30, "Supermercado Boa Compra", "\n"))
+            arq2.write("{}{}{}".format(" "*20, "Av. Central, 1234, - Centro, Cidade Exemplo", "\n"))
+            arq2.write("{}{}{}".format(" "*30, "CNPJ: 12.345.678/0001-99", "\n"))
+            arq2.write("{}{}{}".format(" "*30, "Telefone: (11) 1324-5678", "\n"))
             arq2.write("{}{}".format("-"*80, "\n"))
 
             #--------- data ---------#
-            arq2.write("{}{:52}{}{}".format("DATA: 18/12/2024", "", "HORA: 15:34", "\n"))
-            arq2.write("{}{:20}{}".format("NOTA FISCAL: 00123456789", "", "\n"))
-            arq2.write("{}{:20}{}".format("ATENDENTE: João Silva", "", "\n"))
+            arq2.write("{}{}{}{}".format("DATA: 18/12/2024", " "*52, "HORA: 15:34", "\n"))
+            arq2.write("{}{}{}".format("NOTA FISCAL: 00123456789", " "*20, "\n"))
+            arq2.write("{}{}{}".format("ATENDENTE: João Silva", " "*20, "\n"))
             arq2.write("{}{}".format("-"*80, "\n"))
 
             #--------- subcabecalho ---------#
-            arq2.write("{}{:2}{}{:32}{}{:6}{}{:8}{}{:2}{}{}".format("CÓD", "", "DESCRIÇÃO", "", "QTD", "", "UN", "", "PREÇO", "", "TOTAL", "\n"))
+            arq2.write("{}{}{}{}{}{}{}{}{}{}{}{}".format("CÓD", " "*2, "DESCRIÇÃO", " "*32, "QTD", " "*6, "UN", " "*8, "PREÇO", " "*2, "TOTAL", "\n"))
             arq2.write("{}{}".format("-"*80, "\n"))
 
             #--------- calculo de itens ---------#
@@ -40,18 +40,18 @@ def fazNF(D, filename):
                 troco = pagamento - total
 
                 #--------- impressao de itens ---------#
-                arq2.write("{:03d}{:2}{:30s}{:11}{:2d}{:7}{:8s}{:1}{:6.2f}{:1}{:6.2f}{}".format(codigo, "", descricao, "", qtd, "", unidade, "", preco, "", subTotal, "\n"))
+                arq2.write("{:03d}{}{:30s}{}{:2d}{}{:8s}{}{:6.2f}{}{:6.2f}{}".format(codigo, " "*2, descricao, " "*11, qtd, " "*7, unidade, " "*1, preco, " "*1, subTotal, "\n"))
 
                 compras = arq.readline().strip()
             #--------- totais ---------#
             arq2.write("{}{}".format("-"*80, "\n"))
-            arq2.write("{:46}{}{:10}{:.2f}{}".format("", "TOTAL: ", "", total, "\n"))
-            arq2.write("{:46}{}{:6}{:.2f}{}".format("", "PAGAMENTO: ", "", pagamento, "\n"))
-            arq2.write("{:46}{}{:10}{:.2f}{}".format("", "TROCO: ", "", troco, "\n"))
+            arq2.write("{}{}{}{:.2f}{}".format(" "*46, "TOTAL: ", " "*10, total, "\n"))
+            arq2.write("{}{}{}{:.2f}{}".format(" "*46, "PAGAMENTO: ", " "*6, pagamento, "\n"))
+            arq2.write("{}{}{}{:.2f}{}".format(" "*46, "TROCO: ", " "*10, troco, "\n"))
 
             #--------- agradecimento ---------#
             arq2.write("{}{}".format("-"*80, "\n"))
-            arq2.write("{:16}{}{}".format("", "Obrigado por comprar no Supermercado Boa Compra!", "\n"))
+            arq2.write("{}{}{}".format(" "*16, "Obrigado por comprar no Supermercado Boa Compra!", "\n"))
             arq2.close()
             arq.close()
 
@@ -82,6 +82,6 @@ def loadFileNames(filename):
 def main():
     nomes = loadFileNames("bdfilenames.txt")
     supermercado = loadBDSuper("bdsupermercado.txt")
-    nf = fazNF(supermercado, nomes)
+    fazNF(supermercado, nomes)
 
 main()
