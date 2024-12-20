@@ -1,0 +1,28 @@
+-----------------------------------------------------------------
+                    Supermercado Boa Compra          
+          Av. Central, 1234, - Centro, Cidade Exemplo          
+                    CNPJ: 12.345.678/0001-99          
+                    Telefone: (11) 1324-5678          
+-----------------------------------------------------------------
+DATA: 18/12/2024                                     HORA: 15:34
+NOTA FISCAL: 00123456789                    
+ATENDENTE: João Silva                    
+-----------------------------------------------------------------
+CÓD  DESCRIÇÃO                      QTD      UN     PREÇO  TOTAL
+-----------------------------------------------------------------
+057  Leite Condensado                4       395g    4.90  19.60
+051  Sardinha em Conserva           10       125g    5.80  58.00
+003  Açúcar Cristal                  5       1kg     3.40  17.00
+059  Batata Chips                    2       100g    5.40  10.80
+035  Ovo de Galinha                  1       12 unids   9.50   9.50
+054  Bebida à Base de Soja            4       1L      7.10  28.40
+032  Picanha Bovina                  6       1kg    64.50 387.00
+045  Sal Refinado                    8       1kg     2.50  20.00
+011  Refrigerante Cola               8       2L      8.50  68.00
+012  Água Mineral                    9       500ml   1.20  10.80
+-----------------------------------------------------------------
+                                    TOTAL:           629.10
+                                    PAGAMENTO:       629.10
+                                    TROCO:           0.00
+-----------------------------------------------------------------
+        Obrigado por comprar no Supermercado Boa Compra!
