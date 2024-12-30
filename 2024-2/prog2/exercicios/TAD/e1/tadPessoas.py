@@ -1,24 +1,37 @@
 '''
 tadPessoas
 '''
+        
+
 
 def new_pessoas(n, p, a, i):
-	return {"nome": n, "peso": p, "altura": a, "idade": i}
+    return {"nome": n, "peso": p, "altura": a, "idade": i}
 
 def getNome(tPessoa):
-	return tPessoa["nome"]
+    return tPessoa["nome"]
 
 def getPeso(tPessoa):
-	return tPessoa["peso"]
+    return tPessoa["peso"]
 
 def getAltura(tPessoa):
-	return tPessoa["altura"]
+    return tPessoa["altura"]
 
 def getIdade(tPessoa):
-	return tPessoa["idade"]
+    return tPessoa["idade"]
 
 def maiorIdade(tPessoa):
-	return tPessoa["idade"] >= 18
+    return tPessoa["idade"] >= 18
 
 def imc(tPessoa):
-	return tPessoa["peso"] / tPessoa["altura"] ** 2
+    return tPessoa["peso"] / tPessoa["altura"] ** 2
+
+def imcRange(tPessoa):
+    status = imc(tPessoa)
+    if status < 18.5:
+        return "Abaixo do peso ideal"
+    elif status <= 24.99:
+        return "Peso ideal"
+    elif status <= 29.99:
+        return "Sobrepeso"
+    else:
+        return "Obesidade"
