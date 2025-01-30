@@ -1,8 +1,16 @@
 '''
 tadPessoas
 '''
-        
+def load_file(f):
+    cadastro = []
+    file = open(f, "rt")
+    listppl = file.readline().strip()
+    while listppl != "":
+        person = listppl.split(",")
+        cadastro.append(new_pessoas(person[0], int(person[1]), float(person[2]), int(person[3])))
+        listppl = file.readline().strip()
 
+    return cadastro
 
 def new_pessoas(n, p, a, i):
     return {"nome": n, "peso": p, "altura": a, "idade": i}
