@@ -15,8 +15,9 @@ import imprimeTela as it
 def main():
     #sorteios = lf.carregaArquivo("megaTeste.txt")
     sorteios = lf.carregaArquivo("mega.txt")
-    num1, num2 = om.ordenaMatriz(sorteios)
-    it.imprimeTela(num1, num2)
+    sorteioOrdenado = om.ordenaMatriz(sorteios)
+
+    #it.imprimeTela(sorteios)
 
 main()
 

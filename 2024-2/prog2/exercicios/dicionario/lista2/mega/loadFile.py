@@ -1,6 +1,6 @@
 def carregaArquivo(arquivo):
-    arq = open(arquivo, "rt", encoding="latin-1")
-    entrada = arq.readline()
+    arq = open(arquivo, "rt", encoding="utf-8")
+    arq.readline()
     entrada = arq.readline()
     linhaMega = []
     mega = []
