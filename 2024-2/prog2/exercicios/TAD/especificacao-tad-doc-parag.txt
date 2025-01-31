@@ -1,0 +1,17 @@
+EXERCICIO
+CONSTRUIR O TAD PARAGRAFO. O TAD PARÁGRAFO DEVE ARMAZENAR UM STRING REPRESENTANDO UM PARÁGRAFO DE TEXTO, E DE POSSUIR AS SEGUINTES OPERAÇÕES:
+A) new_paragrafo(String)
+B) print_para(tad_paragrafo)
+C) cont_pals(tad_paragrafo): int
+D) maior_palavra(tad_paragrafo): String
+E) menor_palavra(tad_paragrafo)
+F) lista_pals(tad_paragrafo): lista das palavras
+D) freq_pals(tad_paragrafo): dic com a frequencia de cada palavra
+
+CONSTRUIR O TAD DOCUMENTO COMO UMA LISTA DE TAD PARAGRAFOS.
+O TAD DOCUMENTO POSSUI A SEGUINTE INTERFACE:
+
+A) load_documento(filename): retorna uma lista de tad paragrafo (no documento, paragrafos estão separados por uma linha vazia)
+B) insere_paragrafo(tad_doc,tad_paragrafo, pos)
+C) remove_paragrafo(tad_doc, pos)
+D) print_doc(tad_doc): imprime o documento na tela.
