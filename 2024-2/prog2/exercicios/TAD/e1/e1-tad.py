@@ -1,9 +1,9 @@
 import tadPessoas as tp
 
 def main():
-    ppl = tp.load_file("pessoas.txt")
-    for p in ppl:
-        if tp.maiorIdade(p) is True:
+    ppl = tp.load_file("pessoas.txt")           # chama função abrir arq e criar lista de dicionarios
+    for p in ppl:                               # p = pessoas; ppl = lista de pessoas cadast
+        if tp.maiorIdade(p) is True:            # chama função para verificar idade (bool)
             print("nome: {:s}".format(tp.getNome(p)))
             print("{:d} anos de idade".format(tp.getIdade(p)))
             print("{:.2f} kgs".format(tp.getPeso(p)))
