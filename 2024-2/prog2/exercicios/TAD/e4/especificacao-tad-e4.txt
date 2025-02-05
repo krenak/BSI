@@ -1,0 +1,26 @@
+Exercício 2: TAD para Controle de Estoque (Semelhante ao exercício da segunda lista de dicionários)
+
+Descrição:
+Implemente um TAD chamado Estoque, que gerencia produtos de um armazém. Cada produto possui um nome, uma quantidade e um preço unitário.
+
+    Interface do TAD:
+        - Construtores:
+            - criar_estoque() return Estoque: Cria um estoque vazio.
+            - adicionar_produto(e: Estoque, nome: str, quantidade: int, preco: float) return Estoque: Adiciona um novo produto ao estoque.
+        - Analisadores:
+            - listar_produtos(e: Estoque) return list[str]: Retorna uma lista com os nomes de todos os produtos no estoque.
+            - quantidade_produto(e: Estoque, nome: str) return int: Retorna a quantidade de um produto específico.
+            - valor_total_estoque(e: Estoque) return float: Retorna o valor total de todos os produtos no estoque.
+        - Modificadores:
+            - atualizar_quantidade(e: Estoque, nome: str, nova_quantidade: int) return Estoque: Atualiza a quantidade de um produto específico.
+            - remover_produto(e: Estoque, nome: str) return Estoque: Remove um produto do estoque.
+
+    Atividade:
+    Implemente o TAD Estoque em Python e realize os seguintes testes:
+        1. Crie um estoque com os produtos:
+            - "Arroz", 20 unidades, R$5.00/unidade.
+            - "Feijão", 10 unidades, R$7.00/unidade.
+        2. Liste todos os produtos no estoque.
+        3. Atualize a quantidade de "Arroz" para 30 unidades.
+        4. Calcule o valor total do estoque.
+        5. Remova o produto "Feijão" e liste os produtos restantes.
