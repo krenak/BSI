@@ -17,10 +17,10 @@ A IDEIA PRINCIPAL DO TAD É A ABSTRAÇÃO E O REUSO.
 import eq2grau as eq
 
 def main():
-    eq = eq.new_eq(1, -1, -12)
-    print("Quantidade de raízes: ", eq.quant_raizes(eq))
-    print("Raíz 1: ", eq.getRaiz1(eq))
-    print("Raíz 2: ", eq.getRaiz2(eq))
+    val = eq.new_eq(1, -5, 6)
+    print("Quantidade de raízes: {} raízes".format(eq.quant_raizes(val)))
+    print("Raíz 1: {}".format(eq.getRaiz1(val)))
+    print("Raíz 2: {}".format(eq.getRaiz2(val)))
 
 main()
 

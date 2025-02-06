@@ -19,36 +19,22 @@ def getB(tad):
 def getC(tad):
     return tad[2]
 
+def delta(tad):
+    return ((getB(tad) ** 2) - 4 * getA(tad) * getC(tad))
+
 def quant_raizes(tad):
-    pass
+    if delta(tad) > 0: return 2
+    if delta(tad) == 0: return 1
+    if delta(tad) < 0: return 0
+
 def getRaiz1(tad):
-    pass
-def getRaiz2(tad):
-    pass
-
-
-'''
-itensEq = {}
-    print(f"Equação escolhida: {ca}x²{cb}x{cc}=0")
-    print()
-    if ca == 0:
-        print(f"A equação escohida não é de 2o grau, pois o coeficiente 'a' é igual a == {ca}")
-        return None
+    if quant_raizes(tad) >= 1:
+        return (-(getB(tad) + (delta(tad) ** 0.5)) / 2 * getA(tad))
     else:
-        delta = (cb ** 2) - (4 * ca * cc)
-        print(f"O delta encontrado foi: {delta}")
-        if delta > 0:
-            x1 = ((-1)*cb + (delta**0.5)) / 2 * ca
-            xb = ((-1)*cb - (delta**0.5)) / 2 * ca
-            print(f"As raízes encontradas foram x1: {x1} e x2: {x2}")
-        elif delta == 0:
-            x1 = ((-1)*cb + (delta**0.5)) / 2 * ca
-            x2 = None
-            print(f"A raíz encontrada foi x: {x1}")
-        else:
-            print(f"A solução da equação {ca}x²{cb}x{cc}=0 não contém raízes reais: {delta} < 0.")
-            return None
-    itensEq["eq"] = {"coefA": ca, "coefB": cb, "coefC": cc}
-    itensEq["delta"] = {"delta": delta}
-    itensEq["raizes"] = {"x1": x1, "x2": x2}
-'''
+        return "Não existem raízes reais não-complexas."
+
+def getRaiz2(tad):
+    if quant_raizes(tad) == 2:
+        return (-(getB(tad) - (delta(tad) ** 0.5)) / 2 * getA(tad))
+    else:
+        return "Não existem raízes reais não-complexas."
