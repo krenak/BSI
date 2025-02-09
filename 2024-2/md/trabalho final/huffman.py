@@ -1,8 +1,32 @@
 '''
 código em python sobre o método de compressão sem perdas de dados do código de
 Huffman
-'''
 
+pendente ---> 1) Defina o número de caracteres máximos que há no texto (50.000)
+
+linha 17 ---> 2) usuário define um texto
+
+pendente, mas acho que não precisa dele definir não ---> 3) o usuáriro atribui 
+um valor probabilistico para ocorrencia de cada letra diferente (letras iguais 
+repetem a probabilidade) e a somatória precisa ser igual a 100%
+
+WIP na linha 56 ---> 4) as letras são lidas e organizadas em filas em ordem 
+crescente numérica
+
+WIP na linha 56 ---> 5) Construir a árvore de Huffman
+
+pendente ---> 6) Construir a tabela de codificação para cada caractere e seu 
+respectivo valor binário
+
+pendente ---> 7) Codificar a palavra que foi definida
+
+pendente ---> 8) Multiplicar por 8 o valor inserido no primeiro ponto, ou seja,
+o número de caracteres máximos que há no texto
+
+pendente ---> 9) retornar quantos bits são necessário para armazenar o texto 
+usando a codificação de Huffman
+'''
+  
 # funcao que carrega o arquivo texto a ser comprimido
 def carregaTexto(arquivo):
     conteudo = []
@@ -51,6 +75,7 @@ def arvore(d):
         # ordenando as frequencias para atribuir peso a elas
         if freqSimbol < menorValor:
             menorValor = freqSimbol
+            listaSimbol.append(d[freq])
 
 
 def main():
