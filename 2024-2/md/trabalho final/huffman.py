@@ -1,3 +1,9 @@
+'''
+código em python sobre o método de compressão sem perdas de dados do código de
+Huffman
+'''
+
+# funcao que carrega o arquivo texto a ser comprimido
 def carregaTexto(arquivo):
     conteudo = []
     arquivo = open(arquivo, "rt", encoding="utf-8")
@@ -10,6 +16,7 @@ def carregaTexto(arquivo):
 
     return conteudo
 
+# funcao que quantas vezes cada caractere aparece no texto fornecido
 def contador(texto):
     dicioLetras = {}
     for linhas in texto:
@@ -24,19 +31,36 @@ def contador(texto):
 
     return dicioLetras
 
+# funcao que calcula a proporcao que os caracteres aparecem no texto fornecido
 def probCaracteres(d):
     totalCaracteres = int(len(d.keys()))
     freqCaracteres = {}
     for letra in d.keys():
         freq = (int(d[letra]["cont"]) / totalCaracteres) * 100
-        freqCaracteres[letra] = {"frequencia": freq}
+        freqCaracteres[letra] = {"frequencia": freq, "peso": 0}
 
     return freqCaracteres
 
+# funcao que recebe e ordena o dicionario com os símbolos e suas
+# respec. frequencias
+def arvore(d):
+    listaSimbol = []
+    menorValor = -1
+    for freq in d.keys():
+        freqSimbol = d[freq]['cont']
+        # ordenando as frequencias para atribuir peso a elas
+        if freqSimbol < menorValor:
+            menorValor = freqSimbol
+
+
 def main():
-    texto = carregaTexto("teste.txt")       # função de abrir o arquivo de texto, em txt
-    contagem = contador(texto)              # função contagem de caracteres para o texto
-    print(probCaracteres(contagem))
+    # funcao de abrir o arquivo de texto, em txt
+    texto = carregaTexto("teste.txt")
+    # funcao contagem de caracteres e símbolos para o texto
+    contagem = contador(texto)
+    arvoreBinaria = arvore(contagem)
+    # for letras in contagem.keys():
+    #     print("Frequência de {:s}: {:.2f}".format(letras, contagem[letras]["cont"]))
 
 
 main()
