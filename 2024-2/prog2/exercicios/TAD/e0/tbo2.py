@@ -21,3 +21,19 @@ Explanation of the Pseudocode:
     Swapping: After identifying the minimum element's index, it swaps that element with the one at index i, effectively expanding the sorted portion of the array.
 '''
 
+def selecao(lista):
+    menor = 0
+    i = 0
+    j = 0
+
+    for i in range(len(lista) - 1):
+        menor = i
+        for j in range(i + 1, len(lista)):
+            if lista[j] < lista[menor]:
+                menor = j
+
+        aux = lista[menor]
+        lista[menor] = lista[j]
+        lista[j] = aux
+
+    return lista
