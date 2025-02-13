@@ -26,7 +26,10 @@ o número de caracteres máximos que há no texto
 pendente ---> 9) retornar quantos bits são necessário para armazenar o texto 
 usando a codificação de Huffman
 '''
-  
+
+def quantidade_caracteres():
+    pass
+
 # funcao que carrega o arquivo texto a ser comprimido
 def carregaTexto(arquivo):
     conteudo = []
@@ -56,14 +59,14 @@ def contador(texto):
     return dicioLetras
 
 # funcao que calcula a proporcao que os caracteres aparecem no texto fornecido
-def probCaracteres(d):
-    totalCaracteres = int(len(d.keys()))
-    freqCaracteres = {}
+def freqCaracteres(d):
+    totalCaracteres = int(len(d.keys())) + 1 # quantidade total/maxima de caracteres
+    freqC = {}
     for letra in d.keys():
         freq = (int(d[letra]["cont"]) / totalCaracteres) * 100
-        freqCaracteres[letra] = {"frequencia": freq, "peso": 0}
+        freqC[letra] = {"frequencia": freq, "peso": 0}
 
-    return freqCaracteres
+    return freqC
 
 # funcao que recebe e ordena o dicionario com os símbolos e suas
 # respec. frequencias
@@ -71,21 +74,23 @@ def arvore(d):
     listaSimbol = []
     menorValor = -1
     for freq in d.keys():
-        freqSimbol = d[freq]['cont']
+        freqSimbol = d[freq]['frequencia']
         # ordenando as frequencias para atribuir peso a elas
         if freqSimbol < menorValor:
             menorValor = freqSimbol
-            listaSimbol.append(d[freq])
+            listaSimbol.append(d[frequencia])
 
 
 def main():
     # funcao de abrir o arquivo de texto, em txt
-    texto = carregaTexto("teste.txt")
+    texto = carregaTexto("teste2.txt")
     # funcao contagem de caracteres e símbolos para o texto
     contagem = contador(texto)
-    arvoreBinaria = arvore(contagem)
-    # for letras in contagem.keys():
-    #     print("Frequência de {:s}: {:.2f}".format(letras, contagem[letras]["cont"]))
+    freq = freqCaracteres(contagem)
+    arvoreBinaria = arvore(freq)
+    for letras in freq.keys():
+        print("Frequência de {:s}: {:.2f}%".format(letras, freq[letras]["frequencia"]))
+    print(arvoreBinaria)
 
 
 main()
