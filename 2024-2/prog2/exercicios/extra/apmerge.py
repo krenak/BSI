@@ -3,7 +3,7 @@ apmerge.py
 '''
 
 import mergesort_nr as msnr
-import mergesort_r as msr
+# import mergesort_r as msr
 
 def load_file(filename):
 	enderecos =[]
@@ -21,7 +21,16 @@ def main():
 	cepsRuas = load_file("bdcepsruas_teste.txt")
 	print(cepsRuas)
 	print()
+
 	cepsRuas_ordenada = msnr.mergesortNR(cepsRuas)
 	print(cepsRuas_ordenada)
+
+	f = open("bdmergesort_nr.txt", "wt", encoding="utf-8")
+	for enderecos in cepsRuas_ordenada:
+		for end in enderecos:
+			print(end)
+		# f.write(enderecos)
+
+	f.close()
 
 main()
