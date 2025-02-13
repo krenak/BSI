@@ -1,0 +1,2 @@
+Este trabalho tem como objetivo aplicar os conceitos da Teoria Geral de Sistemas, utilizando diagramas de loop causal para analisar um problema em um sistema, propor ações de melhoria e simular seus impactos.
+O foco principal é o desenvolvimento da compreensão sistêmica e a proposição de soluções embasadas na análise causal.
