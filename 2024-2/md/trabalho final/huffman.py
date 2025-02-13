@@ -2,7 +2,7 @@
 código em python sobre o método de compressão sem perdas de dados do código de
 Huffman
 
-pendente ---> 1) Defina o número de caracteres máximos que há no texto (50.000)
+linha 63 ---> 1) Defina o número de caracteres máximos que há no texto (50.000)
 
 linha 17 ---> 2) usuário define um texto
 
