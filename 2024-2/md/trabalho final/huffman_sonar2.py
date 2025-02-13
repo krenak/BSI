@@ -126,7 +126,7 @@ def main():
         print(f"  Original: {detalhes['original']} bits")
         print(f"  Comprimido: {detalhes['comprimido']} bits")
         print(f"  Ocorrências: {detalhes['ocorrencias']}")
-        print(f"  Total savings: {(detalhes['original'] - detalhes['comprimido']) * detalhes['ocorrencias']} bits")
+        print(f"  Total: {(detalhes['original'] - detalhes['comprimido']) * detalhes['ocorrencias']} bits")
         print()
 
 main()
