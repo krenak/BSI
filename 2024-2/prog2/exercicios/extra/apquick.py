@@ -29,17 +29,6 @@ def wFile(l, filename):
     f.close()
 
 def comparaR(l, comparacao, indice):
-    if len(l) <= 1:
-        return l
-
-    meio = len(l) // 2
-    esquerda = l[:meio]
-    direita = l[meio:]
-
-    esquerda_ord = comparaR(esquerda, comparacao, indice)
-    direita_ord = comparaR(direita, comparacao, indice)
-
-    return msr.merge(esquerda_ord, direita_ord, comparacao, indice)
 
 def comparaNR(l, comparacao, indice):
     pilha = [(0, len(l) - 1)]
