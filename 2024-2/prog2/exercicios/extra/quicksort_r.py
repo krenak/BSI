@@ -1,30 +1,13 @@
 '''
-def quick_sort(l):
-    if len(l) <= 1:
-        return l
-    else:
-        pivot = l[0]
-        less = [x for x in l[1:] if x <= pivot]
-        greater = [x for x in l[1:] if x > pivot]
-        return quick_sort(less) + [pivot] + quick_sort(greater)
+quicksort recursivo
 '''
 
-def quick_sort(l):
-    if len(l) <= 1:
-        return l
-
-    pivot = l[0]
-
-    less = []
-    equal = []
-    greater = []
-
-    for element in l:
-        if element < pivot:
-            less.append(element)
-        elif element == pivot:
-            equal.append(element)
-        else:
-            greater.append(element)
-
-    return quick_sort(less) + equal + quick_sort(greater)
+def reparte(l, inicio, fim, comparacao, indice):
+    pivot = l[fim]
+    i = inicio - 1
+    for j in range(inicio, fim):
+        if comparacao(l[j], pivot, indice):
+            i += 1
+            l[i], l[j] = l[j], l[i]
+    l[i + 1], l[fim] = l[fim], l[i + 1]
+    return i + 1

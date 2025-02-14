@@ -2,22 +2,12 @@
 quicksort nao recursivo
 '''
 
-def reparticao(l, inicio, fim):
+def reparte(l, inicio, fim, comparacao, indice):
     pivot = l[fim]
     i = inicio - 1
     for j in range(inicio, fim):
-        if l[j] <= pivot:
+        if comparacao(l[j], pivot, indice):
             i += 1
             l[i], l[j] = l[j], l[i]
     l[i + 1], l[fim] = l[fim], l[i + 1]
     return i + 1
-
-def quick_sort(arr):
-    stack = [(0, len(arr) - 1)]
-    while stack:
-        low, high = stack.pop()
-        if low < high:
-            pivot_index = partition(arr, low, high)
-            stack.append((low, pivot_index - 1))
-            stack.append((pivot_index + 1, high))
-    return arr

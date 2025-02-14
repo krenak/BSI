@@ -1,5 +1,11 @@
 '''
 apmerge.py
+
+Nota: Professor, na parte ii sobre a função compara, compreendi que
+a ordenação se daria para cada um dos itens - decrescente de estado
+sendo um ciclo, da mesma forma para crescente de município e
+decrescente de cep... Então, na mesma saída, concentrei as três
+ordenações para cada TBO/Recursiva-NaoRecursiva utilizada.
 '''
 
 import mergesort_nr as msnr
@@ -62,7 +68,7 @@ def ordena_decrescente(pos1, pos2, indice):
     return pos1[indice] >= pos2[indice]
 
 def main():
-    cepsRuas = lFile("bdcepsruas_teste.txt")
+    cepsRuas = lFile("bdcepsruas.txt")
     #------ merge sort nao recursivo ------#
     cepsRuas_ordenada = comparaNR(cepsRuas, ordena_decrescente, 5)
     wFile(cepsRuas_ordenada, "bdmergesort_nr.txt")

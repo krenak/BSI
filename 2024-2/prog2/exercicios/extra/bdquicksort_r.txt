@@ -1,0 +1,36 @@
+Ladeira Anthero Braído, no. 12, 21389-401, Jardim Camburi, Iúna, TO], 
+Beco Andrelino Lucas dos Santos, no. 52, 25839-904, Maruípe, Colatina, SE, 
+Escadaria Antônia Pereira Paiva, no. 99, 89719-80, Consolação, Manguinhos, RO, 
+Rua Anníbal Vieira Rabayolli, no. 14, 21389-401, Caratoíra, Muniz Freire, PB, 
+Rua André Carloni, no. 78, 83155-46, Bento Ferreira, Cachoeiro, PB, 
+Praça Anníbal Anthero Martins, no. 90, 13419-564, Tabuazeiro, Manguinhos, PA, 
+Rua Antenor Guimarães, no. 60, 23308-285, Caratoíra, Serra, MS, 
+Escadaria Antenor Passos, no. 6, 15895-036, Caratoíra, Viana, DF, 
+Praça Anita Francisca Crystello, no. 21, 26517-482, do Moscoso, Colatina, AL, 
+Escadaria Antônia Pereira Paiva, no. 82, 21389-401, Jardim da Penha, Cachoeiro, AC, 
+--- fim do arquivo ---
+
+Rua André Carloni, no. 78, 83155-46, Bento Ferreira, Cachoeiro, PB, 
+Escadaria Antônia Pereira Paiva, no. 82, 21389-401, Jardim da Penha, Cachoeiro, AC, 
+Praça Anita Francisca Crystello, no. 21, 26517-482, do Moscoso, Colatina, AL, 
+Beco Andrelino Lucas dos Santos, no. 52, 25839-904, Maruípe, Colatina, SE, 
+Ladeira Anthero Braído, no. 12, 21389-401, Jardim Camburi, Iúna, TO], 
+Praça Anníbal Anthero Martins, no. 90, 13419-564, Tabuazeiro, Manguinhos, PA, 
+Escadaria Antônia Pereira Paiva, no. 99, 89719-80, Consolação, Manguinhos, RO, 
+Rua Anníbal Vieira Rabayolli, no. 14, 21389-401, Caratoíra, Muniz Freire, PB, 
+Rua Antenor Guimarães, no. 60, 23308-285, Caratoíra, Serra, MS, 
+Escadaria Antenor Passos, no. 6, 15895-036, Caratoíra, Viana, DF, 
+--- fim do arquivo ---
+
+Escadaria Antônia Pereira Paiva, no. 99, 89719-80, Consolação, Manguinhos, RO, 
+Rua André Carloni, no. 78, 83155-46, Bento Ferreira, Cachoeiro, PB, 
+Praça Anita Francisca Crystello, no. 21, 26517-482, do Moscoso, Colatina, AL, 
+Beco Andrelino Lucas dos Santos, no. 52, 25839-904, Maruípe, Colatina, SE, 
+Rua Antenor Guimarães, no. 60, 23308-285, Caratoíra, Serra, MS, 
+Escadaria Antônia Pereira Paiva, no. 82, 21389-401, Jardim da Penha, Cachoeiro, AC, 
+Rua Anníbal Vieira Rabayolli, no. 14, 21389-401, Caratoíra, Muniz Freire, PB, 
+Ladeira Anthero Braído, no. 12, 21389-401, Jardim Camburi, Iúna, TO], 
+Escadaria Antenor Passos, no. 6, 15895-036, Caratoíra, Viana, DF, 
+Praça Anníbal Anthero Martins, no. 90, 13419-564, Tabuazeiro, Manguinhos, PA, 
+--- fim do arquivo ---
+
