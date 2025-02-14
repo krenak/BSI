@@ -26,8 +26,8 @@ def lFile(filename):
 def wFile(l, filename):
     f = open(filename, "+a", encoding="utf-8")
     for enderecos in l:
-        for end in enderecos:
-            f.write(end)
+        for dados in enderecos:
+            f.write(dados + ", ")
         f.write("\n")
     f.write("--- fim do arquivo ---")
     f.write("\n")
